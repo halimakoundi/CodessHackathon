@@ -1,0 +1,71 @@
+
+  #mediaInspector {
+    display:none
+  }
+  /* setting mediaInspector */
+#mediaInspector { z-index: 1 }
+
+.rwd-example .ui-block-a,
+.rwd-example .ui-block-b,
+.rwd-example .ui-block-c,
+.rwd-example .ui-block-d {
+    width: 100%;
+    float: none;
+}
+/* 1st breakpoint - Float B and C, leave A full width on top */
+@media all and (min-width: 60em) {
+	/* setting mediaInspector */
+	#mediaInspector { z-index: 2 }
+
+    .rwd-example {
+        overflow: hidden; /* Use this or a "clearfix" to give the container height */
+    }
+    .rwd-example .ui-block-a,
+	.rwd-example .ui-block-b,
+    .rwd-example .ui-block-c {
+      float: left;
+      width: 33%;
+    }
+    .rwd-example .ui-block-a p,
+	.rwd-example .ui-block-b p,
+    .rwd-example .ui-block-c p	
+	{
+      font-size: .8em;
+    }
+	.ui-page .ui-footer  ,
+	.ui-page .ui-header  {
+		text-align: center;
+	}
+    .rwd-example > div + div .ui-body {
+        border-top-width: 1px;
+    }
+    .rwd-example .ui-body {
+       min-height: 8em;
+    }
+
+    .rwd-example > div:first-child .ui-body {
+        border-bottom-width: 1px;
+    }
+    .rwd-example > div + div .ui-body {
+        border-left-width: 0;
+    }
+}
+/* 2nd breakpoint - Bump up font size at very wide screens */
+@media all and (min-width: 75em) {
+	/* setting mediaInspector */
+	#mediaInspector { z-index: 3 }
+	
+    .rwd-example .ui-body {
+      font-size: 125%;
+    }
+    .rwd-example .ui-block-a,
+    .rwd-example .ui-block-c {
+      float: left;
+      width: 33%;
+    }
+    .rwd-example .ui-block-b,
+    .rwd-example .ui-block-c {
+      float: left;
+      width: 33%;
+    }
+}
