@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Population growth (map2)</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization&key=AIzaSyCjZiuy8LWJ6UOURorS-AJpX0IPVEmRCAg"></script>
+    <script>
+      var map;
+      function initializeMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(38, 71),
+          zoom: 3
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+          mapOptions);
+
+        var mapsEngineLayer = new google.maps.visualization.MapsEngineLayer({
+          mapId: '{asset_id}',
+          layerKey: 'map1-layer1',
+          map: map,
+          clickable: true,
+          suppressInfoWindows: false
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initializeMap);
+
+    </script>
+  </head>
+
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+  </html>
