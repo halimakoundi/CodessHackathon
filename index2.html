@@ -19,13 +19,15 @@
 		<a href="../" data-icon="home" data-iconpos="notext" data-ajax="false">Home</a>
 		<a href="" id="navButton" data-icon="bars" data-iconpos="notext">Navigation</a>		
 </div><!-- /header -->
-<div data-role="content">
+<div id="main-content" class="content">
 
 Main DIV for scenario area
 
 
-<div id="sidePanel">
-<div>
+
+</div><!-- /content -->
+
+<div id="side-panel">
 <ul data-role="listview" data-theme="d" data-divider-theme="d" data-icon="false"  class="nav-search">	
 <li><a href="../">Report of the situation</a></li>	
 </ul>
@@ -40,48 +42,22 @@ Main DIV for scenario area
 <div data-icon="true">
 Communication box
 </div>			
-</div>
-</div><!-- /sidePanel -->
-</div><!-- /content -->
-
-
-<div data-role="footer">
-            &copy; GetRedi.com | 
-</div><!-- /footer -->
-<div data-role="panel" id="nav-panel" data-position="right" data-position-fixed="false" data-display="reveal" data-theme="c">
-<ul data-role="listview" data-theme="d" data-divider-theme="d" data-icon="false"  class="nav-search">	
-<li><a href="../">Report of the situation</a></li>	
-</ul>
-<ul data-role="listview" data-theme="d" data-divider-theme="d" data-icon="false"  class="nav-search">	
-<li><a href="../">Selected Data</a></li>	
-<li><a href="../">Activity Report</a></li>
-<li><a href="../" data-corners="true">Info feeds</a></li>
-</ul>
-<div class="infobox">
-      <h1>PLAYER 2 activity</h1>
-</div>
-<div data-icon="true">
-Communication box
-</div><!-- /footer -->			
-</div>
+</div><!-- /navBar -->
 </div><!-- /page -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 <script>
 $(function() {  
     $('#navButton').click(function(){
-	console.log($('#sidePanel').is(':visible'));
-	/*if (!$("#nav-panel2").css('visibility') === 'hidden') {
+	console.log($('#nav-panel2').is(':visible'));
+	if (!$("#nav-panel2").css('visibility') === 'hidden') {
    console.log('visible');
    //$('#nav-panel2').css('visibility','hidden');
-   $('#sidePanel').show();
+   $('#nav-panel2').show();
 }else{
 //console.log('hidden');$('#nav-panel2').css('visibility','visible');
-$('#sidePanel').show();
-}*/
-	if($('#sidePanel').is(':visible')){$('#sidePanel').hide();}else
-	if(!$('#sidePanel').is(':visible'))$('#sidePanel').show();
+$('#nav-panel2').show();
+}
+	/*if($('#nav-panel2').is(':visible'))$('#nav-panel2').hide();
+	if(!$('#nav-panel2').is(':visible'))$('#nav-panel2').show();*/
 }); 
 });
 </script>

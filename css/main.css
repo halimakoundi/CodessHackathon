@@ -5,6 +5,13 @@
   /* setting mediaInspector */
 #mediaInspector { z-index: 1 }
 
+#sidePanel{
+width:40%;
+height:600px;
+float:right;
+border: 1px solid #000;
+}
+
 .rwd-example .ui-block-a,
 .rwd-example .ui-block-b,
 .rwd-example .ui-block-c,
