@@ -1,0 +1,81 @@
+.ui-content {width:50%; float:left;}
+
+body {
+  background-color: ivory;
+  transition: background-color 1s ease-in-out
+}
+
+p, div {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+}
+
+#drag {
+		width: 400px;
+		margin: 0 auto;
+
+}
+
+#drag h2 {clear : both; margin: 5px 0 ;}
+#drag h2 span {margin : 0 6px; }
+#drop {
+	height : 300px;
+
+}
+
+.element-list {
+  border-radius: 5px;
+  border : solid 1px #eee;
+  width: 400px;
+  float : left;
+  margin:3px 0;
+  padding: 5px;
+
+}
+
+.element-list p, .element-chosen p{ line-height: 30px;}
+
+.element-chosen {
+  border-radius: 5px;
+  border : solid 1px #eee;
+  width: 200px;
+  height: 50px;
+}
+
+#result{
+	background-color: grey;
+	display : block ;
+	width : 50px;
+	height : 50px;
+}
+
+.droppeado{
+  background-color: grey;
+}
+
+.local span{
+	background : url(../icons/socioeconomic_rural_64px_icon_bluebox.png) center center no-repeat ;
+	background-size : 100% auto;
+	width : 30px;
+	height:30px;
+	display : inline-block;
+	line-height: 20px;
+	margin-right : 20px;
+
+}
+.gouv span{
+	background : url(../icons/socioeconomic_urban_64px_icon_bluebox.png) center center no-repeat ;
+	background-size : 100% auto;
+	width : 30px;
+	height:30px;
+	display : inline-block;
+	line-height: 20px;
+	margin-right : 20px;
+}
+
+.element-list p span {display : none;}
+
+.item-drag span {background-color:#F5A9A9; color: white; width:15px; height : 15px;}
+#drop .element-list p span {display : inline-block;}

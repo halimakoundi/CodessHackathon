@@ -3,16 +3,16 @@
 #drag div, #drop div {  transition: color 300ms ease; }
 
 /* --- INFOBOX with feeds of other player activities --- */
-#nav-panel .infobox {
+#infobox {
     margin-top: 5px;
     padding: 5px;
     height: 100px;
 }
 
-#nav-panel .infobox {
+#infobox {
     text-align: center;
 }
-#nav-panel .infobox .message {
+#infobox .message {
     width: 200px;
     word-wrap: break-word;
 }
