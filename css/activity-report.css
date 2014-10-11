@@ -3,16 +3,16 @@
 #drag div, #drop div {  transition: color 300ms ease; }
 
 /* --- INFOBOX with feeds of other player activities --- */
-.col-md-4 .infobox {
-    margin-top: 100px;
-    border: 1px solid blue;
-    width: 500px;
-    height: 200px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
+#nav-panel .infobox {
+    margin-top: 5px;
+    padding: 5px;
+    height: 100px;
 }
 
-.col-md-4 .infobox .message, .col-md-4 .infobox {
+#nav-panel .infobox {
     text-align: center;
+}
+#nav-panel .infobox .message {
+    width: 200px;
+    word-wrap: break-word;
 }

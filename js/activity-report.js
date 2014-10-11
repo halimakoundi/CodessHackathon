@@ -1,50 +1,65 @@
-  $(function() {
-    $("#drag").draggable({ 
-      revert: "invalid",
-      revertDuration: 200,
-      cursor: "move", 
-      helper: "clone",
-      cursorAt: { top: 17, left: 80 },
-      start: function(event, ui) {
-        $('#drop')
-          .removeClass("ui-highlight")
-            .find("p")
-              .html("Drop here");
-      },
-      drag: function(event, ui) {
-        $('#drop')
-          .addClass("ui-selected")
-          .find("p")
-            .html("Yes, here !");
-            
-       $(".ui-draggable-dragging")
-         .find("p")
-           .html("Let's go");
-      }
-    });
-  
-    $("#drop").droppable({
-      activeClass: "ui-hover",
-      hoverClass: "ui-active",
-      drop: function( event, ui ) {
-        $(this)
-          .addClass("ui-highlight")
-          .find("p")
-            .html("Got it !");
-      }
-    });
-  });
+function displayMessages() {
+    var m1 = "<h4 class='message'>Made TV/radio announcement</h4>";
+    var m2 = "<h4 class='message'>Called out for international aid</h4>";
+    var m3 = "<h4 class='message'>Closed schools and administrations</h4>";
+    setTimeout(function(){$("#nav-panel .infobox").append(m1);
+        setTimeout(function(){$("#nav-panel .infobox .message").remove();
+            setTimeout(function(){$("#nav-panel .infobox").append(m2);
+                setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                    setTimeout(function(){$("#nav-panel .infobox").append(m3);
+                        setTimeout(function(){$("#nav-panel .infobox .message").remove();}, 2000); 
+                    }, 2000);
+                }, 5000);
+            }, 2000);
+        }, 5000);
+    }, 2000);
+}
 
 $(document).ready(function() {
-    $(".col-md-4 .infobox").on('click', function() {
-        $(this).append("<h2 class='message'>Made TV/radio announcement</h2>");
-        setTimeout(function(){
-            console.log(1);
-            $(".col-md-4 .infobox h2").remove();
-        }, 1000);
-        setTimeout(function(){
-            console.log(2);
-            $(".col-md-4 .infobox").append("<h2 class='message'>Called out for international aid</h2>");
-        }, 1000);
-    });
+    //displayMessages();
+    var m1 = "<h4 class='message'>Made TV/radio announcement</h4>";
+    var m2 = "<h4 class='message'>Called out for international aid</h4>";
+    var m3 = "<h4 class='message'>Closed schools and administrations</h4>";
+    var m4 = "<h4 class='message'>Raised the alert to high emergency</h4>";
+    var m5 = "<h4 class='message'>Advised people to stay home</h4>";
+    var m6 = "<h4 class='message'>Welcomed international help from US and UK</h4>";
+    var m7 = "<h4 class='message'>Deployed army to help rescue teams</h4>";
+    var m8 = "<h4 class='message'>Deployed international aid to help rescue team</h4>";
+    var m9 = "<h4 class='message'>Announced rescue work is successful</h4>";
+    setTimeout(function(){$("#nav-panel .infobox").append(m1);
+        setTimeout(function(){$("#nav-panel .infobox .message").remove();
+            setTimeout(function(){$("#nav-panel .infobox").append(m2);
+                setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                    setTimeout(function(){$("#nav-panel .infobox").append(m3);
+                        setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                            setTimeout(function(){$("#nav-panel .infobox").append(m4);
+                                setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                    setTimeout(function(){$("#nav-panel .infobox").append(m5);
+                                        setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                            setTimeout(function(){$("#nav-panel .infobox").append(m6);
+                                                setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                                setTimeout(function(){$("#nav-panel .infobox").append(m7);
+                                                    setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                                        setTimeout(function(){$("#nav-panel .infobox").append(m8);
+                                                            setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                                                setTimeout(function(){$("#nav-panel .infobox").append(m9);
+                                                                    setTimeout(function(){$("#nav-panel .infobox .message").remove();
+                                                                    }, 8000); 
+                                                                }, 5000);
+                                                            }, 8000);
+                                                        }, 5000);
+                                                    }, 8000);
+                                                }, 5000);
+                                                }, 8000); 
+                                            }, 5000);
+                                        }, 8000);
+                                    }, 5000);
+                                }, 8000);
+                            }, 5000);
+                        }, 8000); 
+                    }, 5000);
+                }, 8000);
+            }, 5000);
+        }, 8000);
+    }, 5000);
 });
