@@ -34,3 +34,17 @@
       }
     });
   });
+
+$(document).ready(function() {
+    $(".col-md-4 .infobox").on('click', function() {
+        $(this).append("<h2 class='message'>Made TV/radio announcement</h2>");
+        setTimeout(function(){
+            console.log(1);
+            $(".col-md-4 .infobox h2").remove();
+        }, 1000);
+        setTimeout(function(){
+            console.log(2);
+            $(".col-md-4 .infobox").append("<h2 class='message'>Called out for international aid</h2>");
+        }, 1000);
+    });
+});
